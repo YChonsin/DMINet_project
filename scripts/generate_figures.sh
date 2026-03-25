@@ -1,0 +1,1 @@
+python ./src/generate_figures.py --dname $1 --dt $2

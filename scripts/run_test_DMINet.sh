@@ -1,0 +1,2 @@
+# run DMI-Net testing using the following command (you can modify the parameters yourself)
+python ./src/reconstruction_test.py --net DMINet128 --gpunum 1 --mfolder $1 --folder for_testing --normtype 1 --mrate 0.5 --mtype irregular --urf 4
