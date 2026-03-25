@@ -11,12 +11,16 @@ Changchun, China.
 If there are any problems with this project, please feel free to contact cxwei24@mails.jlu.edu.cn, 
 or you can ask ChatGPT for help.
 
-All the seismic datasets are saved in '.mat' format, and the filename should be consistent 
-with the variable name inside the '.mat' file, except for the interpolated results.
+**Attention**
 
-As for test data, **only** synthetic data is provided as an example. The field data in the paper can not
-be shared, and you can search for public available field data yourself for testing. All test data should be
-placed in **'./data/for_testing'**.
+**The '.mat' files provided here are only examples that help to quickly train and test DMI-Net.**
+
+All the provided seismic datasets are saved in '.mat' format for simplicity. If you intend to use your 
+own datasets, please make sure the filename is consistent with the variable name inside the '.mat' file.
+
+As for test data, **only** synthetic data, which corresponds to that in the paper, is provided as an example. 
+The field data in the paper can not be shared, and you can search for other public available field datasets for 
+testing. All test data should be saved in **'./data/for_testing'**.
 
 ---
 
