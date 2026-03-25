@@ -113,7 +113,7 @@ A step-by-step tutorial for environment establishment.
 If Python already exists in your **Linux-OS** computer (not recommended on Windows), skip to **Step 1.2**; 
 otherwise, you should install Python in your Linux machine.\
 \
-Here is an example for installing Python using Anaconda.
+① Here is an example for installing Python using Anaconda.
 ```shell
 # 1. Download Anaconda in any directory (Specific Version
 # can be found in the official website: https://www.anaconda.com/)
@@ -134,6 +134,23 @@ conda --version
 python --version
 pip --version
 ```
+You can proceed in the base environment, or create a new environment as below (recommended).
+
+② For the first time you create an environment, you should use the following command:
+```shell
+conda init
+```
+③ Reboot your terminal.
+
+④ Create an environment named 'testenv':
+```shell
+conda create -n testenv python=3.12
+```
+⑤ Activate 'testenv':
+```shell
+conda activate testenv
+```
+
 #### 1.2 Install all required packages
 ```shell
 pip install -r requirements.txt
