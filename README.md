@@ -30,13 +30,7 @@ DMINet_project
 │
 ├── README.md                       # read this first
 ├── requirements.txt                # used for package installation
-├── __init__.py                
-│
-├── pictures/                       # pictures used in README.md
-│   ├── cuda.png                    
-│   ├── dataset.png                 
-│   ├── mamba.png                   
-│   └── torch.png                   
+├── __init__.py                                 
 │
 ├── src/
 │   ├── reconstruction_train.py     # training
@@ -161,24 +155,32 @@ pip install -r requirements.txt
 ```shell
 pip list
 ```
-Here, the version of torch is 2.10.x
-
-![torch.png](pictures/torch.png)
-
+This output indicates the version of torch is 2.10.x.
+```shell
+...
+torch                    2.10.0
+...
+```
 ② Check the CUDA version by:
 ```shell
 nvcc --version
 ```
-Here, the version of CUDA is 12.x.
 
-![cuda.png](pictures/cuda.png)
+This output indicates the version of CUDA is 12.x.
+```shell
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2024 NVIDIA Corporation
+Built on Thu_Mar_28_02:18:24_PDT_2024
+Cuda compilation tools, release 12.4, V12.4.131
+Build cuda_12.4.r12.4/compiler.34097967_0
+```
 
 ③ Visit https://github.com/state-spaces/mamba/releases, \
 and find a suitable version of mamba_ssm, and copy its downloading link.
-
-![mamba.png](pictures/mamba.png)
-
-**In the red boxes, 'cu12' means CUDA 12.x, 'torch2.10' means torch 2.10.x.**
+```shell
+https://github.com/state-spaces/mamba/releases/download/v2.3.1/mamba_ssm-2.3.1+cu12torch2.10cxx11abiTRUE-cp312-cp312-linux_x86_64.whl
+```
+**Here, 'cu12' means CUDA 12.x, 'torch2.10' means torch 2.10.x.**
 
 **Besides, the final part of the release name should be ‘...-linux_x86_64.whl', 
 since you're using an x86-64 Linux OS.**
@@ -207,8 +209,10 @@ Run the bash script as follows:
 bash ./scripts/dataset_processing.sh
 ```
 and this indicates a successful processing:
-
-![dataset.png](pictures/dataset.png)
+```shell
+Training set: 11624 patches
+Validation set: 1408 patches
+```
 
 -------
 ### 3. Training
