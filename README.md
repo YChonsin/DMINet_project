@@ -175,12 +175,22 @@ Cuda compilation tools, release 12.4, V12.4.131
 Build cuda_12.4.r12.4/compiler.34097967_0
 ```
 
-③ Visit https://github.com/state-spaces/mamba/releases, \
+③ Check the Python version by:
+```shell
+python --version
+```
+
+This output indicates the version of Python is 3.12.x.
+```shell
+Python 3.12.3
+```
+
+④ Visit https://github.com/state-spaces/mamba/releases, \
 and find a suitable version of mamba_ssm, and copy its downloading link.
 ```shell
 https://github.com/state-spaces/mamba/releases/download/v2.3.1/mamba_ssm-2.3.1+cu12torch2.10cxx11abiTRUE-cp312-cp312-linux_x86_64.whl
 ```
-**Here, 'cu12' means CUDA 12.x, 'torch2.10' means torch 2.10.x.**
+**Here, 'cu12' means CUDA 12.x, 'torch2.10' means torch 2.10.x, and 'cp312-cp312' means Python 3.12.x.**
 
 **Besides, the final part of the release name should be ‘...-linux_x86_64.whl', 
 since you're using an x86-64 Linux OS.**
